@@ -33,3 +33,15 @@ filesystems=!xdg-music;!xdg-pictures;!xdg-run/app/com.discordapp.Discord
 [Session Bus Policy]
 org.gnome.SettingsDaemon.MediaKeys=none
 ```
+
+Zen flatpak permissions (.local/share/flatpak/overrides/app.zen_browser.zen)
+```bash
+[Context]
+shared=!ipc;!network
+sockets=!cups;!pcsc;!fallback-x11;!x11
+features=!devel
+filesystems=!/run/.heim_org.h5l.kcm-socket
+
+[Environment]
+DICPATH=
+```
