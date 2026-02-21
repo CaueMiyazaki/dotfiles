@@ -10,7 +10,7 @@ sudo pacman -Syu --noconfirm
 sleep 0.5
 
 # Install core packages
-sudo pacman -S gdm gjs gnome-shell gnome-control-center --noconfirm
+sudo pacman -S gdm gjs gnome-shell gnome-control-center gnome-keyring --noconfirm
 sleep 0.5
 
 # Install essential packages
