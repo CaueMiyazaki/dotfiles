@@ -1,0 +1,16 @@
+// --- WINDOW RULES ---
+
+// https://niri-wm.github.io/niri/Configuration:-Window-Rules
+
+// Global rules
+window-rule {
+    geometry-corner-radius 5
+    clip-to-geometry true
+    draw-border-with-background false
+    open-maximized false
+}
+
+window-rule {
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    open-floating true
+}

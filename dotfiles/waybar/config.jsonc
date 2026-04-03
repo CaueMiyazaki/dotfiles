@@ -12,7 +12,7 @@
     "width": 1920, // Waybar width
     "spacing": 4, // Gaps between modules in px
 
-    "modules-left": [ "custom/appmenu", "hyprland/workspaces" ],
+    "modules-left": [ "custom/appmenu" ],
     "modules-center": [ "clock" ],
-    "modules-right": [ "tray", "wireplumber", "group/groupTools", "network", "custom/notification" ],
+    "modules-right": [ "tray", "wireplumber", "group/groupTools", "network", "custom/notification" ]
 }

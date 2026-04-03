@@ -6,7 +6,7 @@
         "tooltip": false,
         "return-type": "json",
         "on-click": "killall fuzzel || fuzzel",
-        "on-click-right": "killall fuzzel || fuzzel",
+        "on-click-right": "killall fuzzel || fuzzel"
     },
 
     "custom/powermenu": {
@@ -14,7 +14,7 @@
         "tooltip": false,
         "return-type": "json",
         "on-click": "killall fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh",
-        "on-click-right": "killall fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh",
+        "on-click-right": "killall fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh"
     },
 
     "custom/notification": {
@@ -43,12 +43,12 @@
         "tooltip": false,
         "return-type": "json",
         "on-click": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh",
-        "on-click-right": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh",
+        "on-click-right": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh"
     },
     
     "custom/toolsIcon": {
         "format": "\uf51e",
-        "tooltip": false,
+        "tooltip": false
     },
     
     "group/groupTools": {
@@ -62,24 +62,19 @@
             "cpu",
             "memory",
             "custom/wallpaperSwitcher",
-            "custom/powermenu",
+            "custom/powermenu"
         ]
     },
     
-    "hyprland/workspaces": {
-        //"disable-scroll": true,
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{icon}",
-        "format-icons": {
+    "niri/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
             "1": "\uf269",
             "2": "\uf07c",
             "3": "\uf489",
             "4": "\uf121",
             "urgent": "\ue007"
-        }
+	    }
     },
         
     "tray": {
@@ -113,13 +108,13 @@
     
     "cpu": {
         "format": "\uf4bc {usage}%",
-        "tooltip": true,
+        "tooltip": true
     },
     
     "memory": {
         "interval": 10,
         "format": "\uefc5 {}%",
-        "tooltip-format": "{used}G / {total}G",
+        "tooltip-format": "{used}G / {total}G"
     },
     
     "network": {
@@ -129,7 +124,7 @@
         "format-disconnected": "\udb80\udd5b",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "Connected to {ifname} via {gwaddr}",
-        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disconnected": "Disconnected"
     },
     
     "wireplumber": {
@@ -140,7 +135,7 @@
         "format-icons": ["\uf027", "\uf028", "\uf028"],
         "scroll-step": 5,
         "max-volume": 100,
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
     
     //   "battery": {

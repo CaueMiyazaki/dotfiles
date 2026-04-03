@@ -1,0 +1,110 @@
+// --- KEYBINDS ---
+// Most actions that you can bind here can also be invoked programmatically with `niri msg action do-something`.
+
+binds {
+    // ========== APPS ==========
+    Mod+Return                 hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+R                      hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+E                      hotkey-overlay-title="Run an Application: thunar" { spawn "thunar"; }
+    Super+Alt+L                hotkey-overlay-title="Lock the Screen: swaylock"  { spawn "swaylock"; }
+    Super+Shift+B              hotkey-overlay-title="Toggle Waybar" repeat=false { spawn-sh "pkill waybar || exec waybar"; }
+
+    // ========== WINDOW/COLUMN MANAGEMENT ==========
+    // While maximize-column leaves gaps and borders around the window,
+    // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
+    Mod+Alt+V                  cooldown-ms=200 { maximize-window-to-edges; }
+    Mod+V                      cooldown-ms=200 { maximize-column; }
+    Mod+F                      cooldown-ms=200 { toggle-window-floating; }
+    Mod+Alt+F                  cooldown-ms=200 { fullscreen-window; }
+    Mod+Space                  repeat=false    { center-column; }
+
+    Mod+S                      repeat=false    { toggle-overview; }
+    Mod+C                      repeat=false    { close-window; }
+    Print                      repeat=false    { screenshot; }
+    Ctrl+Print                 repeat=false    { screenshot-screen; }
+    Alt+Print                  repeat=false    { screenshot-window; }
+
+    // ========== FOCUS WORKSPACE UP/DOWN ==========
+    Mod+Down                   cooldown-ms=200 { focus-workspace-down; }
+    Mod+Up                     cooldown-ms=200 { focus-workspace-up; }
+    Mod+Page_Down              cooldown-ms=200 { focus-workspace-down; }
+    Mod+Page_Up                cooldown-ms=200 { focus-workspace-up; }
+    Mod+WheelScrollDown        cooldown-ms=200 { focus-workspace-down; }
+    Mod+WheelScrollUp          cooldown-ms=200 { focus-workspace-up; }
+
+    // ========== MOVE TO WORKSPACE UP/DOWN ==========
+    Mod+Alt+Down               cooldown-ms=200 { move-column-to-workspace-down; }
+    Mod+Alt+Up                 cooldown-ms=200 { move-column-to-workspace-up; }
+    Mod+Alt+Page_Down          cooldown-ms=200 { move-column-to-workspace-down; }
+    Mod+Alt+Page_Up            cooldown-ms=200 { move-column-to-workspace-up; }
+
+    // ========== FOCUS COLUMNS LEFT/RIGHT ========== 
+    Mod+Left                   cooldown-ms=200 { focus-column-left; }
+    Mod+Right                  cooldown-ms=200 { focus-column-right; }
+    Mod+WheelScrollRight       cooldown-ms=200 { focus-column-right; }
+    Mod+WheelScrollLeft        cooldown-ms=200 { focus-column-left; }
+    Mod+Alt+WheelScrollDown    cooldown-ms=200 { focus-column-right; }
+    Mod+Alt+WheelScrollUp      cooldown-ms=200 { focus-column-left; }
+
+    // ========== FOCUS COLUMNS LEFT/RIGHT/FIRST/LAST ==========
+    Mod+Alt+Left               cooldown-ms=200 { move-column-left; }
+    Mod+Alt+Right              cooldown-ms=200 { move-column-right; }
+    Mod+Home                   cooldown-ms=200 { focus-column-first; }
+    Mod+End                    cooldown-ms=200 { focus-column-last; }
+    Mod+Alt+Home               cooldown-ms=200 { move-column-to-first; }
+    Mod+Alt+End                cooldown-ms=200 { move-column-to-last; }
+
+    // ========== MEDIA KEYS ==========
+    XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
+    XF86AudioLowerVolume       allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioMute              allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+    XF86AudioMicMute           allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86AudioPlay              allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioStop              allow-when-locked=true { spawn-sh "playerctl stop"; }
+    XF86AudioPrev              allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioNext              allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86MonBrightnessUp        allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
+    XF86MonBrightnessDown      allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+
+    // ========== MONITORS ==========
+    // Mod+Shift+Left          { focus-monitor-left; }
+    // Mod+Shift+Down          { focus-monitor-down; }
+    // Mod+Shift+Up            { focus-monitor-up; }
+    // Mod+Shift+Right         { focus-monitor-right; }
+    // Mod+Shift+Ctrl+Left     { move-column-to-monitor-left; }
+    // Mod+Shift+Ctrl+Down     { move-column-to-monitor-down; }
+    // Mod+Shift+Ctrl+Up       { move-column-to-monitor-up; }
+    // Mod+Shift+Ctrl+Right    { move-column-to-monitor-right; }
+
+    // Move a single window to another monitor:
+    // Mod+Shift+Ctrl+Left     { move-window-to-monitor-left; }
+
+    // Move entire workspace to another monitor:
+    // Mod+Shift+Ctrl+Left     { move-workspace-to-monitor-left; }
+
+    // ========== MISC ==========
+    Ctrl+Alt+Delete { quit; }
+
+    // Finer width adjustments. This command can also:
+    // - set width in pixels: "1000"
+    // - adjust width in pixels: "-5" or "+5"
+    // - set width as a percentage of screen width: "25%"
+    // - adjust width as a percentage of screen width: "-10%" or "+10%"
+    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
+    // set-column-width "100" will make the column occupy 200 physical screen pixels.
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
+    // Applications such as remote-desktop clients and software KVM switches may
+    // request that niri stops processing the keyboard shortcuts defined here
+    // so they may, for example, forward the key presses as-is to a remote machine.
+    // It's a good idea to bind an escape hatch to toggle the inhibitor,
+    // so a buggy application can't hold your session hostage.
+    // The allow-inhibiting=false property can be applied to other binds as well,
+    // which ensures niri always processes them, even when an inhibitor is active.
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // Powers off the monitors. To turn them back on, do any input like
+    // moving the mouse or pressing any other key.
+    Mod+Shift+P { power-off-monitors; }
+}
