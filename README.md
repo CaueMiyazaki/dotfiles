@@ -9,7 +9,7 @@ niri xdg-desktop-portal-gtk xdg-user-dirs ufw fwupd nano
 
 Essential/Preferred Apps
 ```bash
-xwayland-satellite wlsunset alacritty swaync fuzzel awww ttf-dejavu-nerd
+wlsunset alacritty swaync fuzzel awww ttf-dejavu-nerd
 ```
 
 Codecs/Drivers/Other Stuff
