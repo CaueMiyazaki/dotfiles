@@ -1,6 +1,6 @@
 # Niri WIP dotfiles
 
-Niri configuration files 
+WIP Niri configuration files, still missing idle configuration, lock, polkit, greeter/DM
 
 Core Packages
 ```bash
