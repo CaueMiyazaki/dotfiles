@@ -1,20 +1,20 @@
-# Hyprland dotfiles
+# Niri WIP dotfiles
 
-My hyprland configuration files 
+Niri configuration files 
 
 Core Packages
 ```bash
-hyprland hypridle hyprlock xdg-desktop-portal-hyprland xdg-user-dirs ufw fwupd nano
+niri xdg-desktop-portal-gtk xdg-user-dirs ufw fwupd nano
 ```
 
 Essential/Preferred Apps
 ```bash
-hyprpolkitagent hyprsunset alacritty swaync grim slurp greetd fuzzel swww ttf-dejavu-nerd
+wlsunset alacritty swaync fuzzel awww ttf-dejavu-nerd
 ```
 
 Codecs/Drivers/Other Stuff
 ```bash
-gvfs-mtp imagemagick ffmpeg opus opusfile mesa vulkan-radeon
+imagemagick ffmpeg opus opusfile mesa vulkan-radeon
 ```
 
 Other Daily Usage Apps

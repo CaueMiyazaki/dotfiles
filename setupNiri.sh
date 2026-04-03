@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ `whoami` != 'root' ]]
-  then echo "Please run as root, sudo bash setupHyprland.sh"
+  then echo "Please run as root, sudo bash setupNiri.sh"
   exit
 fi
 
@@ -10,15 +10,15 @@ sudo pacman -Syu --noconfirm
 sleep 0.5
 
 # Install core packages
-sudo pacman -S hyprland hypridle hyprlock xdg-desktop-portal-hyprland xdg-user-dirs ufw fwupd nano --noconfirm
+sudo pacman -S niri xdg-desktop-portal-gtk xdg-user-dirs ufw fwupd nano --noconfirm
 sleep 0.5
 
 # Install essential packages
-sudo pacman -S hyprpolkitagent hyprsunset alacritty swaync grim slurp greetd fuzzel swww ttf-dejavu-nerd --noconfirm
+sudo pacman -S wlsunset alacritty swaync fuzzel awww ttf-dejavu-nerd --noconfirm
 sleep 0.5
 
 # Install some other stuff
-sudo pacman -S gvfs-mtp imagemagick ffmpeg opus opusfile mesa vulkan-radeon --noconfirm
+sudo pacman -S imagemagick ffmpeg opus opusfile mesa vulkan-radeon --noconfirm
 sleep 0.5
 
 # Install apps
