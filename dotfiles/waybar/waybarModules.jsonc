@@ -5,16 +5,16 @@
         "format": "\uf359",
         "tooltip": false,
         "return-type": "json",
-        "on-click": "killall fuzzel || fuzzel",
-        "on-click-right": "killall fuzzel || fuzzel"
+        "on-click": "pkill fuzzel || fuzzel --anchor top-left --x-margin 7 --y-margin 7",
+        "on-click-right": "pkill fuzzel || fuzzel --anchor top-left --x-margin 7 --y-margin 7"
     },
 
     "custom/powermenu": {
         "format": "\u23fb",
         "tooltip": false,
         "return-type": "json",
-        "on-click": "killall fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh",
-        "on-click-right": "killall fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh"
+        "on-click": "pkill fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh 1",
+        "on-click-right": "pkill fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh 1"
     },
 
     "custom/notification": {
@@ -38,13 +38,13 @@
         "escape": true
     },
 
-    "custom/wallpaperSwitcher": {
-        "format": "\uf03e",
-        "tooltip": false,
-        "return-type": "json",
-        "on-click": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh",
-        "on-click-right": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh"
-    },
+    // "custom/wallpaperSwitcher": {
+    //     "format": "\uf03e",
+    //     "tooltip": false,
+    //     "return-type": "json",
+    //     "on-click": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh",
+    //     "on-click-right": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh"
+    // },
     
     "custom/toolsIcon": {
         "format": "\uf51e",
@@ -61,7 +61,6 @@
             "custom/toolsIcon",
             "cpu",
             "memory",
-            "custom/wallpaperSwitcher",
             "custom/powermenu"
         ]
     },
@@ -136,24 +135,24 @@
         "scroll-step": 5,
         "max-volume": 100,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-    },
+    }
     
-    //   "battery": {
-    //         "states": {
-    //         "good": 95,
-    //          "warning": 30,
-    //          "critical": 15
-    //       },
-    //       "format": "{capacity}% {icon}",
-    //       "format-charging": "{capacity}% \udb80\udc84",
-    //       "format-plugged": "{capacity}% \uf1e6",
-    //       "format-alt": "{time} {icon}",
-    //       "format-good": "", // An empty format will hide the module
-    //       "format-full": "",
-    //       "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
-    //   },
-    //   "battery#bat2": {
-    //       "bat": "BAT2"
-    //   },
+    // "battery": {
+    //     "states": {
+    //     "good": 95,
+    //         "warning": 30,
+    //         "critical": 15
+    //     },
+    //     "format": "{capacity}% {icon}",
+    //     "format-charging": "{capacity}% \udb80\udc84",
+    //     "format-plugged": "{capacity}% \uf1e6",
+    //     "format-alt": "{time} {icon}",
+    //     "format-good": "", // An empty format will hide the module
+    //     "format-full": "",
+    //     "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"]
+    // },
+    // "battery#bat2": {
+    //     "bat": "BAT2"
+    // }
 
 }
