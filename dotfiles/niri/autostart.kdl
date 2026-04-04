@@ -6,5 +6,6 @@
 
 spawn-at-startup "waybar"
 spawn-at-startup "swaync"
-spawn-at-startup "awww-daemon"
-spawn-at-startup "wlsunset" "-t" "3000" "-T" "4000"
+//spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "swaybg -m fill -i $HOME/Pictures/Wallpapers/virtuousContract.png"
+spawn-sh-at-startup "wlsunset -t 3000 -T 4000"

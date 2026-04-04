@@ -6,18 +6,22 @@ layout {
 
     gaps 10
 
+    // Always center a single column on a workspace, regardless of the center-focused-column option
+    always-center-single-column
+
     // When to center a column when changing focus, options are:
-    // - "never", default behavior, focusing an off-screen column will keep at the left
-    //   or right edge of the screen.
+    // - "never", default behavior, focusing an off-screen column will keep at the left edge of the screen.
     // - "always", the focused column will always be centered.
-    // - "on-overflow", focusing a column will center it if it doesn't fit
-    //   together with the previously focused column.
+    // - "on-overflow", focusing a column will center it if it doesn't fit together with the previously focused column.
     center-focused-column "never"
 
-    // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
+    // If you leave the brackets empty, the windows themselves will decide their initial width.
+    default-column-width { proportion 0.5; }
+
+    // You can customize the widths that "switch-preset-column-width" (Default is Mod+R) toggles between.
     preset-column-widths {
         // Proportion sets the width as a fraction of the output width, taking gaps into account.
-        // For example, you can perfectly fit four windows sized "proportion 0.25" on an output.
+        // You can perfectly fit four windows sized "proportion 0.25" on an output.
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.33333
         proportion 0.5
@@ -27,51 +31,30 @@ layout {
         // fixed 1920
     }
 
-    // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-    // preset-window-heights { }
-
-    // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
-    // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
-
-    // By default focus ring and border are rendered as a solid background rectangle
-    // behind windows. That is, they will show up through semitransparent windows.
+    // By default focus ring and border are rendered as a solid background rectangle behind windows. 
+    // That is, they will show up through semitransparent windows.
     // This is because windows using client-side decorations can have an arbitrary shape.
-    //
-    // If you don't like that, you should uncomment `prefer-no-csd` below.
-    // Niri will draw focus ring and border *around* windows that agree to omit their
+    // If you don't like that, you should use `prefer-no-csd` in config.kdl.
+    // Niri will then draw focus ring and border around windows that agree to omit their
     // client-side decorations.
     //
     // Alternatively, you can override it with a window rule called
     // `draw-border-with-background`.
 
-    // You can change how the focus ring looks.
     focus-ring {
-        // Uncomment this line to disable the focus ring.
         on
 
-        // How many logical pixels the ring extends out from the windows.
         width 3
-
-        // Colors can be set in a variety of ways:
-        // - CSS named colors: "red"
-        // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
-        // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
-
-        // Color of the ring on the active monitor.
         active-color "#7fc8ff"
 
         // Color of the ring on inactive monitors.
-        //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
         inactive-color "#505050"
     }
 
-    // You can enable drop shadows for windows.
+    // Drop shadows for windows.
     shadow {
-        // Uncomment the next line to enable shadows.
         // on
 
         // By default, the shadow draws only around its window, and not behind it.
@@ -117,4 +100,5 @@ layout {
         // top 64
         // bottom 64
     }
+    
 }

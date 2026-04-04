@@ -2,7 +2,7 @@
 
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
-// Global rules
+// GLOBAL RULES
 window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
@@ -10,6 +10,7 @@ window-rule {
     open-maximized false
 }
 
+// BROWSER
 window-rule {
     match app-id=r#"zen$"#
     open-maximized true
@@ -17,5 +18,16 @@ window-rule {
 
 window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// FILE MANAGER
+window-rule {
+    match app-id=r#"thunar$"#
+    block-out-from "screencast"
+}
+
+window-rule {
+    match app-id=r#"thunar$"# title=r#"^Rename.*|^File Operation Progress.*"#
     open-floating true
 }
