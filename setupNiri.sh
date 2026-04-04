@@ -14,7 +14,7 @@ sudo pacman -S niri xdg-desktop-portal-gtk xdg-user-dirs ufw fwupd nano --noconf
 sleep 0.5
 
 # Install essential packages
-sudo pacman -S wlsunset alacritty swaync fuzzel swaybg ttf-dejavu-nerd --noconfirm
+sudo pacman -S wlsunset alacritty mako fuzzel swaybg ttf-dejavu-nerd --noconfirm
 sleep 0.5
 
 # Install some other stuff

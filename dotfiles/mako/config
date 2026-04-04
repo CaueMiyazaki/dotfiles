@@ -1,0 +1,15 @@
+font=Adwaita Mono 12
+
+on-button-left=dismiss
+on-button-right=dismiss --no-history
+
+max-visible=6
+max-history=10
+
+background-color=#252525
+border-color=#ffade5
+border-size=3
+padding=12
+margin=7
+border-radius=5
+max-icon-size=64
