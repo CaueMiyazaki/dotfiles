@@ -1,16 +1,15 @@
 // --- WINDOW RULES ---
 
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
+// niri msg --json windows
 
-// GLOBAL RULES
 window-rule {
     geometry-corner-radius 5
     clip-to-geometry true
     draw-border-with-background false
-    open-maximized false
+    open-maximized true
 }
 
-// BROWSER
 window-rule {
     match app-id=r#"zen$"#
     open-maximized true
@@ -21,9 +20,15 @@ window-rule {
     open-floating true
 }
 
-// FILE MANAGER
+window-rule {
+    match app-id=r#"Alacritty$"#
+    open-maximized false
+    block-out-from "screencast"
+}
+
 window-rule {
     match app-id=r#"thunar$"#
+    open-maximized false
     block-out-from "screencast"
 }
 
