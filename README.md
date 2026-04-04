@@ -1,8 +1,11 @@
 # Niri WIP dotfiles
 
 WIP Niri configuration files, still missing idle configuration, lock, polkit, greeter/DM, change systemctl commands to be compatible with other inits
+
 [Gentoo Reddit on openrc-shutdown using openrc-init](https://www.reddit.com/r/Gentoo/comments/wt5t3j/how_shutdown_reboot_loginctl_poweroff_are/)
+
 [Artix forum openrc-shutdown](https://forum.artixlinux.org/index.php/topic,1990.0.html)
+
 [Artix forum openrc-shutdown 2](https://forum.artixlinux.org/index.php/topic,3572.0.html)
 
 Core Packages
