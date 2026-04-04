@@ -11,6 +11,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"zen$"#
+    open-maximized true
+}
+
+window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
