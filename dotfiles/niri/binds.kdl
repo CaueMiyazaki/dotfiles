@@ -20,9 +20,9 @@ binds {
 
     Mod+S                      repeat=false    { toggle-overview; }
     Mod+C                      repeat=false    { close-window; }
-    Print                      repeat=false    { screenshot; }
-    Ctrl+Print                 repeat=false    { screenshot-screen; }
-    Alt+Print                  repeat=false    { screenshot-window; }
+    Mod+X                      repeat=false    { screenshot; }
+    Mod+Ctrl+X                 repeat=false    { screenshot-screen; }
+    Mod+Alt+X                  repeat=false    { screenshot-window; }
 
     // ========== FOCUS WORKSPACE UP/DOWN ==========
     Mod+Down                   cooldown-ms=200 { focus-workspace-down; }
