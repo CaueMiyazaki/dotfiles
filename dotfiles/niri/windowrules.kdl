@@ -21,6 +21,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"zen$"# title="^Library$"
+    open-floating true
+    default-column-width { proportion 0.55; }
+    default-window-height { proportion 0.75; }
+}
+
+window-rule {
     match app-id=r#"Alacritty$"#
     open-maximized false
     block-out-from "screencast"
