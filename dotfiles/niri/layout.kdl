@@ -99,6 +99,32 @@ layout {
         // right 64
         // top 64
         // bottom 64
+    }   
+}
+
+// --- RECENT WINDOWS (ALT TAB) ---
+
+// https://niri-wm.github.io/niri/Configuration:-Recent-Windows
+
+recent-windows {
+    // off
+    debounce-ms 750
+    open-delay-ms 150
+
+    highlight {
+        active-color "#ffade5"
+        urgent-color "#fd0000"
+        padding 30
+        corner-radius 25
     }
-    
+
+    previews {
+        max-height 350
+        max-scale 0.5
+    }
+
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+    }
 }
