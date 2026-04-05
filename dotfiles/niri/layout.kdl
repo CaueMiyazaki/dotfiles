@@ -124,7 +124,7 @@ recent-windows {
     }
 
     binds {
-        Alt+Tab         { next-window; }
-        Alt+Shift+Tab   { previous-window; }
+        Alt+Tab         { next-window scope="workspace"; }
+        Alt+Shift+Tab   { previous-window scope="workspace"; }
     }
 }
