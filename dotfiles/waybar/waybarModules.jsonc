@@ -2,7 +2,7 @@
 
 {
     "custom/appmenu": {
-        "format": "\uf359",
+        "format": "\uf31f",
         "tooltip": false,
         "return-type": "json",
         "on-click": "pkill fuzzel || fuzzel --anchor top-left --x-margin 7 --y-margin 7",
@@ -17,26 +17,26 @@
         "on-click-right": "pkill fuzzel || bash $HOME/.config/waybar/scripts/runPowermenu.sh 1"
     },
 
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "notification": "\udb84\udd6b ",
-            "none": "\udb80\udc9a ",
-            "dnd-notification": "\udb80\udd78 ",
-            "dnd-none": "\udb80\udc9c ",
-            "inhibited-notification": "\udb84\udd6b ",
-            "inhibited-none": "\udb80\udc9a ",
-            "dnd-inhibited-notification": "\udb80\udd78 ",
-            "dnd-inhibited-none": "\udb80\udc9c "
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
+    // "custom/notification": {
+    //     "tooltip": false,
+    //     "format": "{icon}",
+    //     "format-icons": {
+    //         "notification": "\udb84\udd6b",
+    //         "none": "\udb80\udc9a",
+    //         "dnd-notification": "\udb80\udd78",
+    //         "dnd-none": "\udb80\udc9c",
+    //         "inhibited-notification": "\udb84\udd6b",
+    //         "inhibited-none": "\udb80\udc9a",
+    //         "dnd-inhibited-notification": "\udb80\udd78",
+    //         "dnd-inhibited-none": "\udb80\udc9c"
+    //     },
+    //     "return-type": "json",
+    //     "exec-if": "which swaync-client",
+    //     "exec": "swaync-client -swb",
+    //     "on-click": "swaync-client -t -sw",
+    //     "on-click-right": "swaync-client -d -sw",
+    //     "escape": true
+    // },
 
     // "custom/wallpaperSwitcher": {
     //     "format": "\uf03e",

@@ -14,5 +14,5 @@
 
     "modules-left": [ "custom/appmenu" ],
     "modules-center": [ "clock" ],
-    "modules-right": [ "tray", "wireplumber", "group/groupTools", "network", "custom/notification" ]
+    "modules-right": [ "tray", "wireplumber", "group/groupTools", "network" ]
 }

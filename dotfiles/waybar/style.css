@@ -22,15 +22,14 @@ propo is proportionally-spaced (each letter takes up as much space as it needs)
 tooltip {
     background: @black;
     border-radius: 15px;
-    border: 2px solid;
-    border-color: @lightBlue
+    border: 2px solid @lightBlue;
 }
 
+/* Main Window */
 window#waybar {
     background-color: transparent;
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    color: @white; /* Set default text color for all modules here */
+    transition: background-color 0.5s;
 }
 
 window#waybar.hidden {
@@ -38,7 +37,28 @@ window#waybar.hidden {
 }
 
 /* -----------------------------------------------------
- * Custom Modules
+ * Shared Module Styling (Reduces repetition)
+ * ----------------------------------------------------- */
+
+#custom-notification,
+#custom-toolsIcon,
+#custom-wallpaperSwitcher,
+#clock,
+#battery,
+#disk,
+#temperature,
+#network,
+#wireplumber,
+#tray {
+    margin-right: 20px;
+}
+
+#cpu, #memory {
+    padding: 0 15px;
+}
+
+/* -----------------------------------------------------
+ * Specific Module Adjustments
  * ----------------------------------------------------- */
 
 #custom-appmenu {
@@ -47,16 +67,14 @@ window#waybar.hidden {
     margin: 3px 0px 3px 20px;
 }
 
-#custom-powermenu,
 #custom-wallpaperSwitcher {
-    padding: 0 15px;
-}
-
-#custom-wallpaperSwitcher {
+    margin-left: 15px;
     color: @lightBlue;
 }
 
 #custom-powermenu {
+    margin-right: 25px;
+    margin-left: 15px;
     color: @lightRed;
 }
 
@@ -64,45 +82,16 @@ window#waybar.hidden {
     font-size: 20px;
 }
 
+#network { color: @lightBlue; }
+#network.disconnected { color: @lightRed; }
+#wireplumber.muted { color: @bgWhite; }
+
 /* -----------------------------------------------------
- * Main Modules
+ * Workspaces & Buttons
  * ----------------------------------------------------- */
- 
-#cpu,
-#memory {
-    padding: 0 15px;
-    color: @white;
-}
-
-#custom-notification,
-#custom-toolsIcon,
-#clock,
-#battery,
-#disk,
-#temperature,
-#network,
-#wireplumber,
-#tray {
-    padding: 0 10px;
-    color: @white;
-}
-
-#network {
-    color: @lightBlue;
-}
-
-#network.disconnected {
-    color: @lightRed;
-}
-
-#wireplumber.muted {
-    color: @bgWhite;
-}
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
 }
@@ -118,7 +107,6 @@ button {
     padding: 0px 10px;
     margin: 3px 3px;
     border-radius: 8px;
-    border: 0px;
     background-color: @bgWhite;
     color: @bgBlack;
     transition: all 0.15s ease-in-out;
@@ -130,13 +118,16 @@ button {
 
 #workspaces button.active {
     background-color: @lightBlue;
-    border-radius: 8px;
     min-width: 33px;
 }
 
 #workspaces button.urgent {
     background-color: @lightRed;
 }
+
+/* -----------------------------------------------------
+ * Animations/Focus
+ * ----------------------------------------------------- */
 
 @keyframes blink {
     to {
