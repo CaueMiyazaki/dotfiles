@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias progresso='watch -d grep -e Dirty: -e Writeback: /proc/meminfo'
+alias ytd='yt-dlp -x -f "bestaudio" '
 
 PS1='\[\e[38;5;117;1m\]\w\n\[\e[38;5;45m\]>\[\e[0m\] '
 
