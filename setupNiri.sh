@@ -22,7 +22,7 @@ sudo pacman -S imagemagick ffmpeg opus opusfile mesa vulkan-radeon --noconfirm
 sleep 0.5
 
 # Install apps
-sudo pacman -S swayimg btop thunar thunar-volman tumbler --noconfirm
+sudo pacman -S swayimg btop thunar thunar-volman gvfs tumbler --noconfirm
 sleep 0.5
 
 clear
