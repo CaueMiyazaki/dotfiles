@@ -25,7 +25,7 @@ imagemagick ffmpeg opus opusfile mesa vulkan-radeon
 
 Other Daily Usage Apps
 ```bash
-swayimg btop thunar thunar-volman tumbler
+swayimg btop thunar thunar-volman gvfs tumbler
 ```
 
 Steam flatpak permissions (.local/share/flatpak/overrides/com.valvesoftware.Steam)
