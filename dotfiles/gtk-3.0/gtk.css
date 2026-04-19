@@ -1,15 +1,14 @@
 /* GTK 3 THEME BASED ON GTK 4/LIBADWAITA
    ----------------
-   To debug thunar, execute this:
+   To debug thunar gtk, run: GTK_DEBUG=interactive thunar
 
-   GTK_DEBUG=interactive thunar
-
-   sometimes this wont open the debug dialog, then run
-   
-   thunar -q
+   sometimes this wont open the debug dialog, then run: thunar -q
 
    this happens cuz its somehow running in the backround
    thus the theme wont apply properly
+
+   gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+   gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 */
 
 /*********
