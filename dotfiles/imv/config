@@ -1,0 +1,41 @@
+################################################################################
+# General configuration
+################################################################################
+[options]
+# Suppress built-in key bindings, and specify them explicitly in this config file.
+suppress_default_binds = true
+upscaling_method = nearest_neighbour
+overlay_text = $(printf " ") $(basename "$imv_current_file") [$imv_width x $imv_height] [$imv_scale%] [$imv_slideshow_duration] ($imv_current_index/$imv_file_count)
+overlay_position_bottom = true
+
+[aliases]
+# Define aliases here. Any arguments passed to an alias are appended to the command.
+# alias = command to run
+
+[binds]
+# Define some key bindings
+q = quit
+<Left> = prev
+<Right> = next
+
+<Up> = zoom 1
+<Down> = zoom -1
+<equal> = zoom 1
+<minus> = zoom -1
+<Shift+R> = rotate by 90
+
+<F11> = fullscreen
+w = overlay
+c = center
+s = scaling full
+<Shift+S> = scaling shrink
+a = upscaling next
+r = reset
+
+# Gif playback
+<period> = next_frame
+<space> = toggle_playing
+
+# Slideshow control
+t = slideshow +1
+<Shift+T> = slideshow -1
