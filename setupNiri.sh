@@ -14,7 +14,7 @@ sudo pacman -S niri xdg-desktop-portal-gtk xdg-user-dirs ufw fwupd nano --noconf
 sleep 0.5
 
 # Install essential packages
-sudo pacman -S greetd wlsunset alacritty mako fuzzel swaybg ttf-dejavu-nerd --noconfirm
+sudo pacman -S greetd wlsunset alacritty mako fuzzel awww ttf-dejavu-nerd --noconfirm
 sleep 0.5
 
 # Install some other stuff
@@ -22,7 +22,7 @@ sudo pacman -S imagemagick ffmpeg opus opusfile mesa vulkan-radeon --noconfirm
 sleep 0.5
 
 # Install apps
-sudo pacman -S swayimg btop thunar thunar-volman gvfs tumbler --noconfirm
+sudo pacman -S imv btop thunar thunar-volman gvfs tumbler --noconfirm
 sleep 0.5
 
 clear
