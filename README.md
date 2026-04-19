@@ -15,7 +15,7 @@ niri xdg-desktop-portal-gtk xdg-user-dirs ufw fwupd nano
 
 Essential/Preferred Apps
 ```bash
-greetd wlsunset alacritty mako fuzzel swaybg ttf-dejavu-nerd
+greetd wlsunset alacritty mako fuzzel awww ttf-dejavu-nerd
 ```
 
 Codecs/Drivers/Other Stuff
@@ -25,7 +25,7 @@ imagemagick ffmpeg opus opusfile mesa vulkan-radeon
 
 Other Daily Usage Apps
 ```bash
-swayimg btop thunar thunar-volman gvfs tumbler
+imv btop thunar thunar-volman gvfs tumbler
 ```
 
 Steam flatpak permissions (.local/share/flatpak/overrides/com.valvesoftware.Steam)
