@@ -26,34 +26,34 @@ binds {
     Mod+Alt+X                  repeat=false    { screenshot-window; }
 
     // ========== FOCUS WORKSPACE UP/DOWN ==========
-    Mod+Down                   cooldown-ms=200 { focus-workspace-down; }
-    Mod+Up                     cooldown-ms=200 { focus-workspace-up; }
-    Mod+Page_Down              cooldown-ms=200 { focus-workspace-down; }
-    Mod+Page_Up                cooldown-ms=200 { focus-workspace-up; }
-    Mod+WheelScrollDown        cooldown-ms=200 { focus-workspace-down; }
-    Mod+WheelScrollUp          cooldown-ms=200 { focus-workspace-up; }
+    Mod+Down                   cooldown-ms=100 { focus-workspace-down; }
+    Mod+Up                     cooldown-ms=100 { focus-workspace-up; }
+    Mod+Page_Down              cooldown-ms=100 { focus-workspace-down; }
+    Mod+Page_Up                cooldown-ms=100 { focus-workspace-up; }
+    Mod+WheelScrollDown        cooldown-ms=100 { focus-workspace-down; }
+    Mod+WheelScrollUp          cooldown-ms=100 { focus-workspace-up; }
 
     // ========== MOVE TO WORKSPACE UP/DOWN ==========
-    Mod+Alt+Down               cooldown-ms=200 { move-column-to-workspace-down; }
-    Mod+Alt+Up                 cooldown-ms=200 { move-column-to-workspace-up; }
-    Mod+Alt+Page_Down          cooldown-ms=200 { move-column-to-workspace-down; }
-    Mod+Alt+Page_Up            cooldown-ms=200 { move-column-to-workspace-up; }
+    Mod+Alt+Down               cooldown-ms=100 { move-column-to-workspace-down; }
+    Mod+Alt+Up                 cooldown-ms=100 { move-column-to-workspace-up; }
+    Mod+Alt+Page_Down          cooldown-ms=100 { move-column-to-workspace-down; }
+    Mod+Alt+Page_Up            cooldown-ms=100 { move-column-to-workspace-up; }
 
     // ========== FOCUS COLUMNS LEFT/RIGHT ========== 
-    Mod+Left                   cooldown-ms=200 { focus-column-left; }
-    Mod+Right                  cooldown-ms=200 { focus-column-right; }
-    Mod+WheelScrollRight       cooldown-ms=200 { focus-column-right; }
-    Mod+WheelScrollLeft        cooldown-ms=200 { focus-column-left; }
-    Mod+Alt+WheelScrollDown    cooldown-ms=200 { focus-column-right; }
-    Mod+Alt+WheelScrollUp      cooldown-ms=200 { focus-column-left; }
+    Mod+Left                   cooldown-ms=100 { focus-column-left; }
+    Mod+Right                  cooldown-ms=100 { focus-column-right; }
+    Mod+WheelScrollRight       cooldown-ms=100 { focus-column-right; }
+    Mod+WheelScrollLeft        cooldown-ms=100 { focus-column-left; }
+    Mod+Alt+WheelScrollDown    cooldown-ms=100 { focus-column-right; }
+    Mod+Alt+WheelScrollUp      cooldown-ms=100 { focus-column-left; }
 
     // ========== FOCUS COLUMNS LEFT/RIGHT/FIRST/LAST ==========
-    Mod+Alt+Left               cooldown-ms=200 { move-column-left; }
-    Mod+Alt+Right              cooldown-ms=200 { move-column-right; }
-    Mod+Home                   cooldown-ms=200 { focus-column-first; }
-    Mod+End                    cooldown-ms=200 { focus-column-last; }
-    Mod+Alt+Home               cooldown-ms=200 { move-column-to-first; }
-    Mod+Alt+End                cooldown-ms=200 { move-column-to-last; }
+    Mod+Alt+Left               cooldown-ms=100 { move-column-left; }
+    Mod+Alt+Right              cooldown-ms=100 { move-column-right; }
+    Mod+Home                   cooldown-ms=100 { focus-column-first; }
+    Mod+End                    cooldown-ms=100 { focus-column-last; }
+    Mod+Alt+Home               cooldown-ms=100 { move-column-to-first; }
+    Mod+Alt+End                cooldown-ms=100 { move-column-to-last; }
 
     // ========== MEDIA KEYS ==========
     XF86AudioRaiseVolume       allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
