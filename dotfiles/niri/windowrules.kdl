@@ -31,6 +31,9 @@ window-rule {
     match app-id=r#"Alacritty$"#
     open-maximized false
     block-out-from "screencast"
+    background-effect {
+        blur true
+    }
 }
 
 window-rule {
@@ -42,11 +45,4 @@ window-rule {
 window-rule {
     match app-id=r#"thunar$"# title=r#"^Rename.*|^File Operation Progress.*"#
     open-floating true
-}
-
-window-rule {
-    match app-id="^Alacritty$"
-    background-effect {
-        blur true
-    }
 }
