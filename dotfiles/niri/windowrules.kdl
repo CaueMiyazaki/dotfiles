@@ -46,5 +46,7 @@ window-rule {
 
 window-rule {
     match app-id="^Alacritty$"
-    background-effect { blur true }
+    background-effect {
+        blur true
+    }
 }
