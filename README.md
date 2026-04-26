@@ -43,11 +43,13 @@ org.gnome.SettingsDaemon.MediaKeys=none
 Zen flatpak permissions (.local/share/flatpak/overrides/app.zen_browser.zen)
 ```bash
 [Context]
-shared=!ipc;!network
-sockets=!cups;!pcsc;!fallback-x11;!x11
+shared=!network
+sockets=!cups;!pcsc;!pulseaudio;!fallback-x11;!x11
+devices=!all;dri
 features=!devel
-filesystems=!/run/.heim_org.h5l.kcm-socket
+filesystems=!xdg-run/speech-dispatcher;!/run/.heim_org.h5l.kcm-socket
 
-[Environment]
-DICPATH=
+[Session Bus Policy]
+org.gtk.vfs.*=none
+org.a11y.Bus=none
 ```
