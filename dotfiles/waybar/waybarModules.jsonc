@@ -38,13 +38,13 @@
     //     "escape": true
     // },
 
-    // "custom/wallpaperSwitcher": {
-    //     "format": "\uf03e",
-    //     "tooltip": false,
-    //     "return-type": "json",
-    //     "on-click": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh",
-    //     "on-click-right": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh"
-    // },
+    "custom/wallpaperSwitcher": {
+        "format": "\uf03e",
+        "tooltip": false,
+        "return-type": "json",
+        "on-click": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh",
+        "on-click-right": "bash $HOME/.config/waybar/scripts/changeWallpaper.sh"
+    },
     
     "custom/toolsIcon": {
         "format": "\uf51e",
@@ -61,7 +61,8 @@
             "custom/toolsIcon",
             "cpu",
             "memory",
-            "custom/powermenu"
+            "custom/powermenu",
+            "custom/wallpaperSwitcher"
         ]
     },
     
