@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set -euo pipefail 
+# set -euo pipefail
 # Configures the behavior of the script to make it more robust.
 # -e Ensures that if a command fails, the script will stop there.
 # -u Ensures that if you try to use an undefined or unset variable, the script exits with an error.
@@ -14,7 +14,7 @@ app_name=zen
 official_package_download_link="https://github.com/zen-browser/desktop/releases/latest/download/zen.linux-x86_64.tar.xz"
 dowloaded_tar_save_location_and_file_name="$HOME/zen.linux-x86_64.tar.xz"
 local_desktop_entry="$HOME/.local/share/applications/$app_name.desktop"
-final_installation_directory="$HOME/.tarball-installations"
+final_installation_directory="$HOME/.local/bin"
 executable_path=$final_installation_directory/zen/zen
 executable_icon_path="$final_installation_directory/zen/browser/chrome/icons/default/default128.png"
 
@@ -33,7 +33,7 @@ sleep 1
 
 echo "Creating neccessary folders"
 mkdir -p $HOME/.local/share/applications
-mkdir $final_installation_directory
+mkdir -p $final_installation_directory
 
 echo "Extracting Zen Browser..."
 tar -xvJf $dowloaded_tar_save_location_and_file_name
