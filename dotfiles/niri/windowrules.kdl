@@ -33,6 +33,7 @@ window-rule {
     block-out-from "screencast"
     background-effect {
         blur true
+        xray false
     }
 }
 
